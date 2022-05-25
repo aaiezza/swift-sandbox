@@ -17,6 +17,8 @@
 		138223CD283E829200616663 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138223CB283E829200616663 /* ContentView.swift */; };
 		138223CF283E8A6F00616663 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138223CE283E8A6F00616663 /* StartButtonView.swift */; };
 		138223D1283E8E2E00616663 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138223D0283E8E2E00616663 /* OnboardingView.swift */; };
+		13B7A35F283E9DDC00BC4360 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B7A35E283E9DDC00BC4360 /* FruitData.swift */; };
+		13D2B7D5283E944B007BF929 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D2B7D4283E944B007BF929 /* FruitModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		138223CB283E829200616663 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		138223CE283E8A6F00616663 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		138223D0283E8E2E00616663 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		13B7A35E283E9DDC00BC4360 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		13B7A360283EAAAC00BC4360 /* Fructus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fructus.entitlements; sourceTree = "<group>"; };
+		13D2B7D4283E944B007BF929 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,9 @@
 		130125F6283E80F70024FEF7 /* Fructus */ = {
 			isa = PBXGroup;
 			children = (
+				13B7A360283EAAAC00BC4360 /* Fructus.entitlements */,
+				13B7A35D283E9DCD00BC4360 /* Data */,
+				13D2B7D3283E9434007BF929 /* Model */,
 				13034E75283E822800369CAA /* View */,
 				13034E74283E822300369CAA /* App */,
 				130125FB283E80F80024FEF7 /* Assets.xcassets */,
@@ -152,6 +160,22 @@
 				138223CE283E8A6F00616663 /* StartButtonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		13B7A35D283E9DCD00BC4360 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				13B7A35E283E9DDC00BC4360 /* FruitData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		13D2B7D3283E9434007BF929 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13D2B7D4283E944B007BF929 /* FruitModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B7A35F283E9DDC00BC4360 /* FruitData.swift in Sources */,
 				138223CC283E829200616663 /* FructusApp.swift in Sources */,
 				138223CF283E8A6F00616663 /* StartButtonView.swift in Sources */,
 				138223C9283E828500616663 /* FruitCardView.swift in Sources */,
 				138223D1283E8E2E00616663 /* OnboardingView.swift in Sources */,
+				13D2B7D5283E944B007BF929 /* FruitModel.swift in Sources */,
 				138223CD283E829200616663 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +472,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Fructus/Fructus.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fructus/Preview Content\"";
@@ -458,6 +486,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +494,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.shaba.Fructus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -478,6 +508,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Fructus/Fructus.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fructus/Preview Content\"";
@@ -490,6 +522,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,6 +530,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.shaba.Fructus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

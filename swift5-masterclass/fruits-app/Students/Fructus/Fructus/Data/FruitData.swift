@@ -1,4 +1,15 @@
-let fruitsData: [Fruit] = [
+//
+//  FruitData.swift
+//  Fructus
+//
+//  Created by Alex Aiezza on 5/25/22.
+//
+
+import SwiftUI
+
+// MARK: - FRUITS DATA
+
+public let fruitsData: [Fruit] = [
   Fruit(
     title: .init("Blueberry"),
     headline: .init("Blueberries are a sweet, nutritious, and wildly popular fruit all over the world."),
@@ -34,46 +45,13 @@ let fruitsData: [Fruit] = [
       .init("0.74 g"),
       .init("A, B1, B2, B3, B5, B6, B9, C, E, K"),
       .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc")]
-  )
-]
-
-
-Fruit(
-    title: "Blueberry",
-    headline: "Blueberries are sweet, nutritious and wildly popular fruit all over the world.",
-    image: "blueberry",
-    gradientColors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")],
-    description: """
-      Blueberries are perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira blueberries.
-
-      Commercial blueberries—both wild (lowbush) and cultivated (highbush)—are all native to North America. The highbush varieties were introduced into Europe during the 1930s.
-
-      Blueberries are usually prostrate shrubs that can vary in size from 10 centimeters (3.9 in) to 4 meters (13 ft) in height. In commercial production of blueberries, the species with small, pea-size berries growing on low-level bushes are known as "lowbush blueberries" (synonymous with "wild"), while the species with larger berries growing on taller cultivated bushes are known as "highbush blueberries".
-
-      Canada is the leading producer of lowbush blueberries, while the United States produces some 40% of the world supply of highbush blueberries.
-
-      USES
-
-      Blueberries are sold fresh or are processed as individually quick frozen (IQF) fruit, purée, juice, or dried or infused berries. These may then be used in a variety of consumer goods, such as jellies, jams, blueberry pies, muffins, snack foods, or as an additive to breakfast cereals.
-
-      Blueberry jam is made from blueberries, sugar, water, and fruit pectin. Blueberry sauce is a sweet sauce prepared using blueberries as a primary ingredient.
-
-      Blueberry wine is made from the flesh and skin of the berry, which is fermented and then matured; usually the lowbush variety is used.
-
-      NUTRIENTS
-
-      Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and 84% water (table). They contain only negligible amounts of micronutrients, with moderate levels (relative to respective Daily Values) (DV) of the essential dietary mineral manganese, vitamin C, vitamin K and dietary fiber (table).
-
-      Generally, nutrient contents of blueberries are a low percentage of the DV (table). One serving provides a relatively low caloric value of 57 kcal with a glycemic load of 6.
-      """,
-    nutrition: [.init("240 kJ (57 kcal)"),.init("9.96 g"),.init("0.33 g"),.init("0.74 g"),.init("A, B1, B2, B3, B5, B6, B9, C, E, K"),.init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Strawberry",
-    headline: "Widely appreciated for its characteristic aroma,  red color, juicy texture, and sweetness.",
-    image: "strawberry",
-    gradientColors: [Color("ColorStrawberryLight"), Color("ColorStrawberryDark")],
-    description: """
+    title: .init("Strawberry"),
+    headline: .init("Widely appreciated for its characteristic aroma, red color, juicy texture, and sweetness."),
+    image: .init("strawberry"),
+    gradientColors: .init([Color("ColorStrawberryLight"), Color("ColorStrawberryDark")]),
+    description: .init("""
       The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit. The fruit is widely appreciated for its characteristic aroma, bright red color, juicy texture, and sweetness. It is consumed in large quantities, either fresh or in such prepared foods as jam, juice, pies, ice cream, milkshakes, and chocolates. Artificial strawberry flavorings and aromas are also widely used in products such as candy, soap, lip gloss, perfume, and many others.
 
       The strawberry is not, from a botanical point of view, a berry. Technically, it is an aggregate accessory fruit, meaning that the fleshy part is derived not from the plant's ovaries but from the receptacle that holds the ovaries.[4] Each apparent "seed" (achene) on the outside of the fruit is actually one of the ovaries of the flower, with a seed inside it.
@@ -91,15 +69,21 @@ Fruit(
       One serving (100 g; see Table) of strawberries contains approximately 33 kilocalories, is an excellent source of vitamin C, a good source of manganese, and provides several other vitamins and dietary minerals in lesser amounts.
 
       Strawberries contain a modest amount of essential unsaturated fatty acids in the achene (seed) oil.
-      """,
-    nutrition: ["136 kJ (33 kcal)","4.89 g","0.3 g","0.67 g","B1, B2, B3, B5, B6, B9, Choline, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("136 kJ (33 kcal)"),
+      .init("4.89 g"),
+      .init("0.3 g"),
+      .init("0.67 g"),
+      .init("B1, B2, B3, B5, B6, B9, Choline, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Lemon",
-    headline: "There's no doubt lemons are delicious, but does adding them to water make you healthier?",
-    image: "lemon",
-    gradientColors: [Color("ColorLemonLight"), Color("ColorLemonDark")],
-    description: """
+    title: .init("Lemon"),
+    headline: .init("There's no doubt lemons are delicious, but does adding them to water make you healthier?"),
+    image: .init("lemon"),
+    gradientColors: .init([Color("ColorLemonLight"), Color("ColorLemonDark")]),
+    description: .init("""
       The lemon, Citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae, native to South Asia, primarily North eastern India. Its fruits are round in shape.
 
       The tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes throughout the world, primarily for its juice, which has both culinary and cleaning uses. The pulp and rind are also used in cooking and baking. The juice of the lemon is about 5% to 6% citric acid, with a pH of around 2.2, giving it a sour taste. The distinctive sour taste of lemon juice makes it a key ingredient in drinks and foods such as lemonade and lemon meringue pie.
@@ -111,7 +95,7 @@ Fruit(
       Lemons contain numerous phytochemicals, including polyphenols, terpenes, and tannins.[14] Lemon juice contains slightly more citric acid than lime juice (about 47 g/l), nearly twice the citric acid of grapefruit juice, and about five times the amount of citric acid found in orange juice.
 
       CULINARY
-      
+
       Lemon juice, rind, and peel are used in a wide variety of foods and drinks. The whole lemon is used to make marmalade, lemon curd and lemon liqueur. Lemon slices and lemon rind are used as a garnish for food and drinks. Lemon zest, the grated outer rind of the fruit, is used to add flavor to baked goods, puddings, rice, and other dishes.
 
       JUICE
@@ -133,15 +117,21 @@ Fruit(
       LEAVES
 
       The leaves of the lemon tree are used to make a tea and for preparing cooked meats and seafoods.
-      """,
-    nutrition: ["121 kJ (29 kcal)","2.5 g","0.3 g","1.1 g","B1, B2, B3, B5, B6, B9, C, Choline","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"]
+      """),
+    nutrition: [
+      .init("121 kJ (29 kcal)"),
+      .init("2.5 g"),
+      .init("0.3 g"),
+      .init("1.1 g"),
+      .init("B1, B2, B3, B5, B6, B9, C, Choline"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc")]
   ),
   Fruit(
-    title: "Plum",
-    headline: "Plums are a very nutritious fruit. An excellent source of vitamins, minerals, fiber and antioxidants.",
-    image: "plum",
-    gradientColors: [Color("ColorPlumLight"), Color("ColorPlumDark")],
-    description: """
+    title: .init("Plum"),
+    headline: .init("Plums are a very nutritious fruit. An excellent source of vitamins, minerals, fiber and antioxidants."),
+    image: .init("plum"),
+    gradientColors: .init([Color("ColorPlumLight"), Color("ColorPlumDark")]),
+    description: .init("""
       A plum is a fruit of the subgenus Prunus of the genus Prunus. The subgenus is distinguished from other subgenera (peaches, cherries, bird cherries, etc.) in the shoots having terminal bud and solitary side buds (not clustered), the flowers in groups of one to five together on short stems, and the fruit having a groove running down one side and a smooth stone (or pit).
 
       Mature plum fruit may have a dusty-white waxy coating that gives them a glaucous appearance. This is an epicuticular wax coating and is known as "wax bloom". Dried plum fruits are called "dried plums" or prunes, although, in many countries, prunes are a distinct type of dried plum having a wrinkled appearance (Li hing mui for instance).
@@ -165,15 +155,21 @@ Fruit(
       The Japanese variety, called umeboshi, is often used for rice balls, called onigiri or omusubi. The ume, from which umeboshi are made, is more closely related, however, to the apricot than to the plum. In the Balkans, plum is converted into an alcoholic drink named slivovitz (plum brandy) (Serbian: šljivovica).
 
       A large number of plums, of the Damson variety, are also grown in Hungary, where they are called szilva and are used to make lekvar (a plum paste jam), palinka (traditional fruit brandy), plum dumplings, and other foods. In Romania, 80% of the plum production is used to create a similar brandy, called țuică.
-      """,
-    nutrition: ["192 kJ (46 kcal)","9.92 g","0.28 g","0.7 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("192 kJ (46 kcal)"),
+      .init("9.92 g"),
+      .init("0.28 g"),
+      .init("0.7 g"),
+      .init("A, B1, B2, B3, B5, B6, B9, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Lime",
-    headline: "Sour, round, and bright green citrus fruits. Limes are high in vitamin C, antioxidants, and other nutrients.",
-    image: "lime",
-    gradientColors: [Color("ColorLimeLight"), Color("ColorLimeDark")],
-    description: """
+    title: .init("Lime"),
+    headline: .init("Sour, round, and bright green citrus fruits. Limes are high in vitamin C, antioxidants, and other nutrients."),
+    image: .init("lime"),
+    gradientColors: .init([Color("ColorLimeLight"), Color("ColorLimeDark")]),
+    description: .init("""
     A lime (from French lime, from Arabic līma, from Persian līmū, "lemon")[1] is a citrus fruit, which is typically round, green in color, 3–6 centimetres (1.2–2.4 in) in diameter, and contains acidic juice vesicles.
 
     There are several species of citrus trees whose fruits are called limes, including the Key lime (Citrus aurantiifolia), Persian lime, kaffir lime, and desert lime. Limes are a rich source of vitamin C, are sour, and are often used to accent the flavours of foods and beverages. They are grown year-round.[3] Plants with fruit called "limes" have diverse genetic origins; limes do not form a monophyletic group.
@@ -195,15 +191,21 @@ Fruit(
     Lime is an ingredient in several highball cocktails, often based on gin, such as gin and tonic, the gimlet and the Rickey. Freshly squeezed lime juice is also considered a key ingredient in margaritas, although sometimes lemon juice is substituted. It is also intimately associated with many rum cocktails such as the Daiquiri, and tropical drinks - especially within the Tiki culture.
 
     Lime extracts and lime essential oils are frequently used in perfumes, cleaning products, and aromatherapy.
-    """,
-    nutrition: ["126 kJ (30 kcal)","1.7 g","0.2 g","0.7 g","B1, B2, B3, B5, B6, B9, C","Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium"]
+    """),
+    nutrition: [
+      .init("126 kJ (30 kcal)"),
+      .init("1.7 g"),
+      .init("0.2 g"),
+      .init("0.7 g"),
+      .init("B1, B2, B3, B5, B6, B9, C"),
+      .init("Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium")]
   ),
   Fruit(
-    title: "Pomegranate",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "pomegranate",
-    gradientColors: [Color("ColorPomegranateLight"), Color("ColorPomegranateDark")],
-    description: """
+    title: .init("Pomegranate"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("pomegranate"),
+    gradientColors: .init([Color("ColorPomegranateLight"), Color("ColorPomegranateDark")]),
+    description: .init("""
       The pomegranate (Punica granatum) is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m (16 and 33 ft) tall.
 
       The pomegranate originated in the region extending from Iran to northern India, and has been cultivated since ancient times throughout the Mediterranean region. It was introduced into Spanish America in the late 16th century and into California by Spanish settlers in 1769.
@@ -221,15 +223,21 @@ Fruit(
       Pomegranate granatum is grown for its fruit crop, and as ornamental trees and shrubs in parks and gardens. Mature specimens can develop sculptural twisted-bark multiple trunks and a distinctive overall form. Pomegranates are drought-tolerant, and can be grown in dry areas with either a Mediterranean winter rainfall climate or in summer rainfall climates. In wetter areas, they can be prone to root decay from fungal diseases. They can be tolerant of moderate frost, down to about −12 °C (10 °F).
 
       Insect pests of the pomegranate can include the pomegranate butterfly Virachola isocrates and the leaf-footed bug Leptoglossus zonatus, and fruit flies and ants are attracted to unharvested ripe fruit. Pomegranate grows easily from seed, but is commonly propagated from 25 to 50 cm (10 to 20 in) hardwood cuttings to avoid the genetic variation of seedlings. Air layering is also an option for propagation, but grafting fails.
-      """,
-    nutrition: ["346 kJ (83 kcal)","13.67 g","1.17 g","1.67 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("346 kJ (83 kcal)"),
+      .init("13.67 g"),
+      .init("1.17 g"),
+      .init("1.67 g"),
+      .init("B1, B2, B3, B5, B6, B9, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Pear",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "pear",
-    gradientColors: [Color("ColorPearLight"), Color("ColorPearDark")],
-    description: """
+    title: .init("Pear"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("pear"),
+    gradientColors: .init([Color("ColorPearLight"), Color("ColorPearDark")]),
+    description: .init("""
       The pear (/ˈpɛər/) tree and shrub are a species of genus Pyrus /ˈpaɪrəs/, in the family Rosaceae, bearing the pomaceous fruit of the same name. Several species of pear are valued for their edible fruit and juices while others are cultivated as trees.
 
       The tree is medium-sized and native to coastal as well as mildly temperate regions of Europe, north Africa and Asia. Pear wood is one of the preferred materials in the manufacture of high-quality woodwind instruments and furniture.
@@ -241,7 +249,7 @@ Fruit(
       The pear is native to coastal and mildly temperate regions of the Old World, from western Europe and north Africa east right across Asia. It is a medium-sized tree, reaching 10–17 metres (33–56 ft) tall, often with a tall, narrow crown; a few species are shrubby.
 
       The leaves are alternately arranged, simple, 2–12 centimetres (1–4 1⁄2 in) long, glossy green on some species, densely silvery-hairy in some others; leaf shape varies from broad oval to narrow lanceolate. Most pears are deciduous, but one or two species in southeast Asia are evergreen.
-      
+
       Most are cold-hardy, withstanding temperatures as low as −25 to −40 °C (−13 to −40 °F) in winter, except for the evergreen species, which only tolerate temperatures down to about −15 °C (5 °F).
 
       CULTIVATION
@@ -257,15 +265,21 @@ Fruit(
       Other species are used as rootstocks for European and Asian pears and as ornamental trees. Pear wood is close-grained and at least in the past was used as a specialized timber for fine furniture and making the blocks for woodcuts. The Manchurian or Ussurian Pear, Pyrus ussuriensis (which produces unpalatable fruit) has been crossed with Pyrus communis to breed hardier pear cultivars.
 
       The Bradford pear (Pyrus calleryana 'Bradford') in particular has become widespread in North America, and is used only as an ornamental tree, as well as a blight-resistant rootstock for Pyrus communis fruit orchards. The Willow-leaved pear (Pyrus salicifolia) is grown for its attractive, slender, densely silvery-hairy leaves.
-      """,
-    nutrition: ["239 kJ (57 kcal)","9.75 g","0.14 g","0.36 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("239 kJ (57 kcal)"),
+      .init("9.75 g"),
+      .init("0.14 g"),
+      .init("0.36 g"),
+      .init("B1, B2, B3, B5, B6, B9, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Gooseberry",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "gooseberry",
-    gradientColors: [Color("ColorGooseberryLight"), Color("ColorGooseberryDark")],
-    description: """
+    title: .init("Gooseberry"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("gooseberry"),
+    gradientColors: .init([Color("ColorGooseberryLight"), Color("ColorGooseberryDark")]),
+    description: .init("""
       The gooseberry (/ˈɡuːsbɛri/ or /ˈɡuːzbɛri/ (American and northern British) or /ˈɡʊzbəri/ (southern British)), with scientific names Ribes uva-crispa (and syn. Ribes grossularia), is a species of Ribes (which also includes the currants).
 
       It is native to Europe, the Caucasus and northern Africa. The species is also sparingly naturalized in scattered locations in North America. Gooseberry bushes produce an edible fruit and are grown on both a commercial and domestic basis. Its native distribution is unclear, since it may have escaped from cultivation and become naturalized. For example, in Britain, some sources consider it to be a native,[4] others to be an introduction.
@@ -281,15 +295,21 @@ Fruit(
       CULINARY
 
       Gooseberries are edible and can be eaten as-is, or used as an ingredient in desserts, such as pies, fools and crumbles. Early pickings are generally sour and more appropriate for culinary use. They are also used to flavour beverages such as sodas, flavoured waters, or milk, and can be made into fruit wines and teas. Gooseberries can be preserved in the form of jams, dried fruit, or as the primary or a secondary ingredient in pickling, or stored in sugar syrup.
-      """,
-    nutrition: ["184 kJ (44 kcal)","6.15","0.58 g","0.88 g","A, B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("184 kJ (44 kcal)"),
+      .init("6.15"),
+      .init("0.58 g"),
+      .init("0.88 g"),
+      .init("A, B1, B2, B3, B5, B6, B9, C, E"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Mango",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "mango",
-    gradientColors: [Color("ColorMangoLight"), Color("ColorMangoDark")],
-    description: """
+    title: .init("Mango"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("mango"),
+    gradientColors: .init([Color("ColorMangoLight"), Color("ColorMangoDark")]),
+    description: .init("""
       A mango is a juicy stone fruit (drupe) produced from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit. Most of these species are found in nature as wild mangoes. The genus belongs to the cashew family Anacardiaceae. Mangoes are native to South Asia, from where the "common mango" or "Indian mango", Mangifera indica, has been distributed worldwide to become one of the most widely cultivated fruits in the tropics. Other Mangifera species (e.g. horse mango, Mangifera foetida) are grown on a more localized basis.
 
       Worldwide, there are several hundred cultivars of mango. Depending on the cultivar, mango fruit varies in size, shape, sweetness, skin color, and flesh color which may be pale yellow, gold, or orange. Mango is the national fruit of India and Pakistan, and the national tree of Bangladesh. It is the unofficial national fruit of the Philippines.
@@ -313,15 +333,21 @@ Fruit(
       The current world market is dominated by the cultivar 'Tommy Atkins', a seedling of 'Haden' that first fruited in 1940 in southern Florida and was initially rejected commercially by Florida researchers.[22] Growers and importers worldwide have embraced the cultivar for its excellent productivity and disease resistance, shelf life, transportability, size, and appealing color.[23] Although the Tommy Atkins cultivar is commercially successful, other cultivars may be preferred by consumers for eating pleasure, such as Alphonso.
 
       Generally, ripe mangoes have an orange-yellow or reddish peel and are juicy for eating, while exported fruit are often picked while underripe with green peels. Although producing ethylene while ripening, unripened exported mangoes do not have the same juiciness or flavor as fresh fruit.
-      """,
-    nutrition: ["250 kJ (60 kcal)","13.7 g","0.38 g","0.82 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("250 kJ (60 kcal)"),
+      .init("13.7 g"),
+      .init("0.38 g"),
+      .init("0.82 g"),
+      .init("A, B1, B2, B3, B5, B6, B9, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Watermelon",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "watermelon",
-    gradientColors: [Color("ColorWatermelonLight"), Color("ColorWatermelonDark")],
-    description: """
+    title: .init("Watermelon"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("watermelon"),
+    gradientColors: .init([Color("ColorWatermelonLight"), Color("ColorWatermelonDark")]),
+    description: .init("""
       Watermelon (Citrullus lanatus) is a plant species in the family Cucurbitaceae, a vine-like flowering plant originally domesticated in West Africa. It is a highly cultivated fruit worldwide, having more than 1000 varieties.
 
       Watermelon is a scrambling and trailing vine in the flowering plant family Cucurbitaceae. There is evidence from seeds in Pharaoh tombs of watermelon cultivation in Ancient Egypt. Watermelon is grown in favorable climates from tropical to temperate regions worldwide for its large edible fruit, which is a berry with a hard rind and no internal divisions, and is botanically called a pepo.
@@ -347,15 +373,21 @@ Fruit(
       The US Department of Agriculture recommends using at least one beehive per acre (4,000 m2 per hive) for pollination of conventional, seeded varieties for commercial plantings. Seedless hybrids have sterile pollen. This requires planting pollinizer rows of varieties with viable pollen. Since the supply of viable pollen is reduced and pollination is much more critical in producing the seedless variety, the recommended number of hives per acre (pollinator density) increases to three hives per acre (1,300 m2 per hive). Watermelons have a longer growing period than other melons, and can often take 85 days or more from the time of transplanting for the fruit to mature.
 
       Lack of pollen is thought to contribute to "hollow heart" which causes the flesh of the watermelon to devleop a large hole, sometimes in an intricate, symmetric shape. Watermelons suffering from hollow heart are safe to consume.
-      """,
-    nutrition: ["127 kJ (30 kcal)","6.2 g","0.15 g","0.61 g","A, B1, B2, B3, B5, B6, C","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("127 kJ (30 kcal)"),
+      .init("6.2 g"),
+      .init("0.15 g"),
+      .init("0.61 g"),
+      .init("A, B1, B2, B3, B5, B6, C"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Cherry",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "cherry",
-    gradientColors: [Color("ColorCherryLight"), Color("ColorCherryDark")],
-    description: """
+    title: .init("Cherry"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("cherry"),
+    gradientColors: .init([Color("ColorCherryLight"), Color("ColorCherryDark")]),
+    description: .init("""
       A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit). Commercial cherries are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus.
 
       The name 'cherry' also refers to the cherry tree and its wood, and is sometimes applied to almonds and visually similar flowering trees in the genus Prunus, as in "ornamental cherry" or "cherry blossom". Wild cherry may refer to any of the cherry species growing outside cultivation, although Prunus avium is often referred to specifically by the name "wild cherry" in the British Isles.
@@ -369,15 +401,21 @@ Fruit(
       Common rootstocks include Mazzard, Mahaleb, Colt, and Gisela Series, a dwarfing rootstock that produces trees significantly smaller than others, only 8 to 10 feet (2.5 to 3 meters) tall.[9] Sour cherries require no pollenizer, while few sweet varieties are self-fertile.
 
       A cherry tree will take three to four years once it is planted in the orchard to produce its first crop of fruit, and seven years to attain full maturity.
-      """,
-    nutrition: ["209 kJ (50 kcal)","8.5 g","0.3 g","1 g","A, B1, B2, B3, B5, B6, B9, C, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("209 kJ (50 kcal)"),
+      .init("8.5 g"),
+      .init("0.3 g"),
+      .init("1 g"),
+      .init("A, B1, B2, B3, B5, B6, B9, C, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   ),
   Fruit(
-    title: "Grapefruit",
-    headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
-    image: "grapefruit",
-    gradientColors: [Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")],
-    description: """
+    title: .init("Grapefruit"),
+    headline: .init("Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft."),
+    image: .init("grapefruit"),
+    gradientColors: .init([Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")]),
+    description: .init("""
       The grapefruit (Citrus × paradisi) is a subtropical citrus tree known for its relatively large sour to semisweet, somewhat bitter fruit. Grapefruit is a citrus hybrid originating in Barbados as an accidental cross between the sweet orange (C. sinensis) and pomelo (or shaddock; C. maxima), both of which were introduced from Asia in the 17th century.[2] When found, it was nicknamed the "forbidden fruit". Frequently, it is misidentified as the very similar parent species, pomelo.
 
       The "grape" part of the name alludes to clusters of fruit on the tree that often appear similar to grape clusters. The interior flesh is segmented and varies in color from white to yellow to pink to red.
@@ -395,15 +433,21 @@ Fruit(
       Raw grapefruit is 90% water, 8% carbohydrates, 1% protein, and negligible fat (table). In a 100-g reference amount, raw grapefruit provides 33 Calories and is a rich source of vitamin C (40% of the Daily Value), with no other micronutrients in significant content.
 
       In Costa Rica, especially in Atenas, grapefruit are often cooked to remove their sourness, rendering them as sweets; they are also stuffed with dulce de leche, resulting in a dessert called toronja rellena (stuffed grapefruit). In Haiti, grapefruit is used primarily for its juice (jus de Chadèque), but also is used to make jam (confiture de Chadèque).
-      """,
-    nutrition: ["138 kJ (33 kcal)","7.31 g","0.10 g","0.8 g","B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"]
+      """),
+    nutrition: [
+      .init("138 kJ (33 kcal)"),
+      .init("7.31 g"),
+      .init("0.10 g"),
+      .init("0.8 g"),
+      .init("B1, B2, B3, B5, B6, B9, C, E"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc")]
   ),
   Fruit(
-    title: "Apple",
-    headline: "Apples are one of the most popular, and exceptionally healthy fruit for good reason.",
-    image: "apple",
-    gradientColors: [Color("ColorAppleLight"), Color("ColorAppleDark")],
-    description: """
+    title: .init("Apple"),
+    headline: .init("Apples are one of the most popular, and exceptionally healthy fruit, and for good reason."),
+    image: .init("apple"),
+    gradientColors: .init([Color("ColorAppleLight"), Color("ColorAppleDark")]),
+    description: .init("""
       An apple is an edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian tradition.
 
       DESCRIPTION
@@ -419,6 +463,13 @@ Fruit(
       The UK's national fruit collection database contains much information on the characteristics and origin of many apples, including alternative names for what is essentially the same "genetic" apple cultivar. Most of these cultivars are bred for eating fresh (dessert apples), though some are cultivated specifically for cooking (cooking apples) or producing cider. Cider apples are typically too tart and astringent to eat fresh, but they give the beverage a rich flavor that dessert apples cannot.
 
       Commercially popular apple cultivars are soft but crisp. Other desirable qualities in modern commercial apple breeding are a colorful skin, absence of russeting, ease of shipping, lengthy storage ability, high yields, disease resistance, common apple shape, and developed flavor. Modern apples are generally sweeter than older cultivars, as popular tastes in apples have varied over time. Most North Americans and Europeans favor sweet, subacid apples, but tart apples have a strong minority following. Extremely sweet apples with barely any acid flavor are popular in Asia, especially the Indian Subcontinent.
-      """,
-    nutrition: ["218 kJ (52 kcal)","10.39 g","0.17 g","0.26 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+      """),
+    nutrition: [
+      .init("218 kJ (52 kcal)"),
+      .init("10.39 g"),
+      .init("0.17 g"),
+      .init("0.26 g"),
+      .init("A, B1, B2, B3, B5, B6, B9, C, E, K"),
+      .init("Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc")]
   )
+]
