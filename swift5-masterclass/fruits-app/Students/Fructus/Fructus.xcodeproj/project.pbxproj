@@ -53,6 +53,7 @@
 		138223CE283E8A6F00616663 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		138223D0283E8E2E00616663 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		13B7A35E283E9DDC00BC4360 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		13B7A360283EAAAC00BC4360 /* Fructus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fructus.entitlements; sourceTree = "<group>"; };
 		13D2B7D4283E944B007BF929 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +107,7 @@
 		130125F6283E80F70024FEF7 /* Fructus */ = {
 			isa = PBXGroup;
 			children = (
+				13B7A360283EAAAC00BC4360 /* Fructus.entitlements */,
 				13B7A35D283E9DCD00BC4360 /* Data */,
 				13D2B7D3283E9434007BF929 /* Model */,
 				13034E75283E822800369CAA /* View */,
