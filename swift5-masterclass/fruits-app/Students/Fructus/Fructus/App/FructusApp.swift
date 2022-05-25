@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct FructusApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

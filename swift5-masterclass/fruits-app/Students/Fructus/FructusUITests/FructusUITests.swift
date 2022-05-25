@@ -1,13 +1,13 @@
 //
-//  Tests_iOS.swift
-//  Tests iOS
+//  FructusUITests.swift
+//  FructusUITests
 //
 //  Created by Alex Aiezza on 5/25/22.
 //
 
 import XCTest
 
-class Tests_iOS: XCTestCase {
+class FructusUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

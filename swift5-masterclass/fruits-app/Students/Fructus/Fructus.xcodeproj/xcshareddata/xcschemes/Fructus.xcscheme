@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13F0C6C4283E750A005FCF3E"
+               BlueprintIdentifier = "130125F3283E80F70024FEF7"
                BuildableName = "Fructus.app"
-               BlueprintName = "Fructus (iOS)"
+               BlueprintName = "Fructus"
                ReferencedContainer = "container:Fructus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13F0C6D1283E750A005FCF3E"
-               BuildableName = "Tests iOS.xctest"
-               BlueprintName = "Tests iOS"
+               BlueprintIdentifier = "13012603283E80F80024FEF7"
+               BuildableName = "FructusTests.xctest"
+               BlueprintName = "FructusTests"
+               ReferencedContainer = "container:Fructus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1301260D283E80F80024FEF7"
+               BuildableName = "FructusUITests.xctest"
+               BlueprintName = "FructusUITests"
                ReferencedContainer = "container:Fructus.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -54,9 +64,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13F0C6C4283E750A005FCF3E"
+            BlueprintIdentifier = "130125F3283E80F70024FEF7"
             BuildableName = "Fructus.app"
-            BlueprintName = "Fructus (iOS)"
+            BlueprintName = "Fructus"
             ReferencedContainer = "container:Fructus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,9 +81,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13F0C6C4283E750A005FCF3E"
+            BlueprintIdentifier = "130125F3283E80F70024FEF7"
             BuildableName = "Fructus.app"
-            BlueprintName = "Fructus (iOS)"
+            BlueprintName = "Fructus"
             ReferencedContainer = "container:Fructus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -1,13 +1,13 @@
 //
-//  Tests_iOSLaunchTests.swift
-//  Tests iOS
+//  FructusUITestsLaunchTests.swift
+//  FructusUITests
 //
 //  Created by Alex Aiezza on 5/25/22.
 //
 
 import XCTest
 
-class Tests_iOSLaunchTests: XCTestCase {
+class FructusUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

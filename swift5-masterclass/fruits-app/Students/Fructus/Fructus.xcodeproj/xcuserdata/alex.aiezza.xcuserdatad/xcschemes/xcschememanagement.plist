@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Fructus (iOS).xcscheme_^#shared#^_</key>
+		<key>Fructus.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,22 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13F0C6C4283E750A005FCF3E</key>
+		<key>130125F3283E80F70024FEF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13F0C6CA283E750A005FCF3E</key>
+		<key>13012603283E80F80024FEF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13F0C6D1283E750A005FCF3E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>13F0C6DD283E750A005FCF3E</key>
+		<key>1301260D283E80F80024FEF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
