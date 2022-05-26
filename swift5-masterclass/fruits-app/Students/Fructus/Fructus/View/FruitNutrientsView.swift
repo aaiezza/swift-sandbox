@@ -1,38 +1,31 @@
-//
-//  FruitNutrientsView.swift
-//  Fructus
-//
-//  Created by Alex Aiezza on 5/26/22.
-//
-
 import SwiftUI
 
 struct FruitNutrientsView: View {
   // MARK: - PROPERTIES
 
   var fruit: Fruit
-  let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
 
   // MARK: - BODY
 
   var body: some View {
     GroupBox {
       DisclosureGroup("Nutritional value per 100g") {
-        ForEach(0..<nutrients.count, id: \.self) { nutrientIndex in
-          if nutrientIndex > 0 {
+        ForEach(0..<fruit.nutritionFacts.count, id: \.self) { i in
+          if i > 0 {
               Divider().padding(.vertical, 2)
           } else { Spacer(minLength: 12) }
 
           HStack {
             Group {
               Image(systemName: "info.circle")
-              Text(nutrients[nutrientIndex])
+              Text(fruit.nutritionFacts[i].category.rawValue.capitalized)
             }
             .foregroundColor(fruit.gradientColors.rawValue[1])
             .font(Font.system(.body).bold())
 
             Spacer(minLength: 25)
-            fruit.nutrition[nutrientIndex].asText()
+            fruit.nutritionFacts[i].value.asText()
+              .font(Font.system(.subheadline).monospaced())
               .multilineTextAlignment(.trailing)
           }
         } //: FOR EACH NUTRIENT

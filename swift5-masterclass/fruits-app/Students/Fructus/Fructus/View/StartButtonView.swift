@@ -1,10 +1,3 @@
-//
-//  StartButtonView.swift
-//  Fructus
-//
-//  Created by Alex Aiezza on 5/25/22.
-//
-
 import SwiftUI
 
 struct StartButtonView: View {

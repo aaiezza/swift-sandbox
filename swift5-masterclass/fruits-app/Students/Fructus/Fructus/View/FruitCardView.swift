@@ -1,10 +1,3 @@
-//
-//  FruitCardView.swift
-//  Fructus (iOS)
-//
-//  Created by Alex Aiezza on 5/25/22.
-//
-
 import SwiftUI
 
 struct FruitCardView: View {
