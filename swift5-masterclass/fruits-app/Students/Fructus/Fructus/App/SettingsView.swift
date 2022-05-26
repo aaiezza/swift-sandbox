@@ -33,19 +33,25 @@ struct SettingsView: View {
           // MARK: SECTION 2
           GroupBox(
             label: SettingsLabelView(
-              labelText: "Fructus",
-              lableImage: "info.circle")
+              labelText: "Application",
+              lableImage: "phone")
             ) {
-              Text("Hello, World!")
             }
 
           // MARK: SECTION 3
           GroupBox(
             label: SettingsLabelView(
-              labelText: "Fructus",
-              lableImage: "info.circle")
+              labelText: "Application",
+              lableImage: "apps.iphone")
             ) {
-              Text("Hello, World!")
+              SettingsRowView(name: "Develooper", withDivider: false, content: "Alessandro Aiezza II")
+              SettingsRowView(name: "Designer", content: "Robert Petras")
+              SettingsRowView(name: "Compatibility", content: "iOS 14")
+              SettingsRowView(name: "Website", linkLabel: "SwiftUI Masterclass", linkDestination: "swiftuimasterclass.com")
+              SettingsRowView(name: "Twitter", linkLabel: "@scribaniwannabe", linkDestination: "twitter.com/scribaniwannabe")
+              SettingsRowView(name: "SwiftUI", content: "3.0")
+              SettingsRowView(name: "Version", content: "1.1.0")
+
             }
         } //: VSTACK
         .navigationBarTitle(Text("Settings"), displayMode: .large)
