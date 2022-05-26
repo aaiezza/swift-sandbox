@@ -10,25 +10,27 @@ struct FruitNutrientsView: View {
   var body: some View {
     GroupBox {
       DisclosureGroup("Nutritional value per 100g") {
-        ForEach(0..<fruit.nutritionFacts.count, id: \.self) { i in
-          if i > 0 {
-              Divider().padding(.vertical, 2)
-          } else { Spacer(minLength: 12) }
+        ScrollView(.vertical, showsIndicators: false) {
+          ForEach(0..<fruit.nutritionFacts.count, id: \.self) { i in
+            if i > 0 {
+                Divider().padding(.vertical, 2)
+            } else { Spacer().frame(maxHeight: 1).padding(.vertical, 4) }
 
-          HStack {
-            Group {
-              Image(systemName: "info.circle")
-              Text(fruit.nutritionFacts[i].category.rawValue.capitalized)
+            HStack {
+              Group {
+                Image(systemName: "info.circle")
+                Text(fruit.nutritionFacts[i].category.rawValue.capitalized)
+              }
+              .foregroundColor(fruit.gradientColors.rawValue[1])
+              .font(Font.system(.body).bold())
+
+              Spacer(minLength: 25)
+              fruit.nutritionFacts[i].value.asText()
+                .font(Font.system(.subheadline).monospaced())
+                .multilineTextAlignment(.trailing)
             }
-            .foregroundColor(fruit.gradientColors.rawValue[1])
-            .font(Font.system(.body).bold())
-
-            Spacer(minLength: 25)
-            fruit.nutritionFacts[i].value.asText()
-              .font(Font.system(.subheadline).monospaced())
-              .multilineTextAlignment(.trailing)
-          }
-        } //: FOR EACH NUTRIENT
+          } //: FOR EACH NUTRIENT
+        }
       }
     } //: GROUP BOX
   }
