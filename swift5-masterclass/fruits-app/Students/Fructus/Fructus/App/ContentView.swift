@@ -17,9 +17,11 @@ struct ContentView: View {
       NavigationView {
         List {
           ForEach(fruits.shuffled()) { fruit in
-            FruitRowView(fruit: fruit)
-              .padding(.vertical, 4)
-          }
+            NavigationLink(destination: FruitDetailView(fruit: fruit)) {
+              FruitRowView(fruit: fruit)
+                .padding(.vertical, 4)
+            } //: NAVIGATION LINK
+          } //: FOR EACH FRUIT
         } //: LIST
         .navigationTitle(Text("Fruits"))
       } //: NAVIGATION
@@ -33,6 +35,7 @@ struct ContentView_Previews: PreviewProvider {
       ContentView(fruits: fruitsData.sorted {
         $0.title.rawValue < $1.title.rawValue
       })
+      .preferredColorScheme(.dark)
       .previewDevice("iPhone 13 Pro")
   }
 }

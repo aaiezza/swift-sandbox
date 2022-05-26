@@ -24,7 +24,7 @@ struct FruitRowView: View {
           .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 3, x: 2, y: 2)
           .background(fruit.getLinearGradient())
           .cornerRadius(17)
-        
+
         VStack(alignment: .leading, spacing: 5) {
           fruit.title.asText()
             .font(.title2)
