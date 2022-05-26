@@ -298,7 +298,7 @@ public let fruitsData: [Fruit] = [
       """),
     nutrition: [
       .init("184 kJ (44 kcal)"),
-      .init("6.15"),
+      .init("6.15 g"),
       .init("0.58 g"),
       .init("0.88 g"),
       .init("A, B1, B2, B3, B5, B6, B9, C, E"),
