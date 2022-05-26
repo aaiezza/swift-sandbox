@@ -51,6 +51,8 @@ struct SettingsView: View {
                 .fontWeight(.bold)
                 .foregroundColor(isRestarted ? .green : .secondary)
             }
+            .padding()
+            .background(Color(UIColor.tertiarySystemBackground).clipShape(RoundedRectangle(cornerRadius: 9, style: .continuous)))
           }
 
           // MARK: SECTION 3
