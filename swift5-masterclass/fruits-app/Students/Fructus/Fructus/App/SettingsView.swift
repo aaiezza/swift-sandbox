@@ -3,8 +3,9 @@ import SwiftUI
 struct SettingsView: View {
   // MARK: - PROPERTIES
 
-  @Environment(\.presentationMode) var presentationMode
+  @Environment(\.dismiss) var dismiss
   @AppStorage("isOnboarding") var isOnboarding: Bool = false
+  @State private var isRestarted: Bool = false
 
   // MARK: - BODY
 
@@ -44,8 +45,11 @@ struct SettingsView: View {
               .layoutPriority(1)
               .multilineTextAlignment(.leading)
 
-            Toggle(isOn: $isOnboarding) {
-              Text("Restart".uppercased())
+            Toggle(isOn: $isRestarted) {
+              Text((isRestarted ? "Restarted" : "Restart").uppercased())
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(isRestarted ? .green : .secondary)
             }
           }
 
@@ -68,11 +72,12 @@ struct SettingsView: View {
         .navigationBarTitle(Text("Settings"), displayMode: .large)
         .navigationBarItems(
           trailing: Button(action: {
-            presentationMode.wrappedValue.dismiss()
+            isOnboarding = isRestarted // "magic" is here
+            dismiss() // close the sheet
           }) {
             Image(systemName: "xmark")
           })
-          .padding()
+        .padding()
       } //: SCROLL
     } //: NAVIGATION
   }
